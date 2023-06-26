@@ -6,7 +6,16 @@ import { Header } from '../../components/Header';
 import { Input } from '../../components/Input';
 import { Column, Container, CriarText, EsqueciText, Row, SubtitleLogin, Title, TitleLogin, Wrapper } from './styles';
 
+import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
+import * as yup from "yup";
+
+const schema = yup
+  .object({
+    email: yup.string().email('email is not valid').required(),
+    password: yup.string().min(3, 'last 3 chars').required(),
+  })
+  .required()
 
 const Login = () => {
   const navigate = useNavigate();
@@ -15,7 +24,9 @@ const Login = () => {
     control,
     handleSubmit,
     formState: { errors, isValid },
-  } = useForm();
+  } = useForm({resolver: yupResolver(schema)});
+
+  console.log(isValid, errors);
 
   const onSubmit = (data) => console.log(data)
 
@@ -52,3 +63,4 @@ const Login = () => {
 }
 
 export { Login };
+
