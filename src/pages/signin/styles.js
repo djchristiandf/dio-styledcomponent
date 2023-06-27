@@ -24,6 +24,25 @@ export const Row = styled.div`
   align-items: center;
   margin-top: 20px;
 `
+export const EsqueciText = styled.p`
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+
+  color: #E5E844;
+`
+
+export const CriarText = styled.p`
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+
+  color: #E23DD7;
+`
 
 export const Title = styled.h2`
   font-weight: 700;
@@ -46,9 +65,9 @@ export const SubTitleSignUp = styled.p`
   line-height: 25px;
 `
 
-export const RightAccept = styled.p`
-  font-weight: 400;
-  font-size: 18px;
+export const Directs = styled.p`
+  font-weight: 500;
+  font-size: 20px;
   margin-top: 40px;
   margin-bottom: 12px;
 `

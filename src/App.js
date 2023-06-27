@@ -1,12 +1,13 @@
 import {
+  Route,
   BrowserRouter as Router,
   Routes,
-  Route,
 } from "react-router-dom";
 
-import { Home } from "./pages/home"
-import { Login } from "./pages/login"
-import { Feed } from "./pages/feed"
+import { Feed } from "./pages/feed";
+import { Home } from "./pages/home";
+import { Login } from "./pages/login";
+import { SignIn } from "./pages/signin";
 import { GlobalStyle } from './styles/global';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/feed" element={<Feed />} />
+        <Route path="/signin" element={<SignIn />} />
       </Routes>
     </Router>
   );

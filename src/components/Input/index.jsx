@@ -1,5 +1,5 @@
-import React from 'react';
-import { IconContainer, InputContainer, InputText, ErrorText } from './styles';
+import React from 'react';    
+import { ErrorMessage, IconContainer, InputContainer, InputText } from './styles';
 
 import { Controller } from 'react-hook-form';
 
@@ -15,9 +15,10 @@ const Input = ({leftIcon, name, control, errorMessage,...rest})  =>{
         render={({field}) => <InputText { ...field} {...rest} />}
       />      
       </InputContainer>
-      {errorMessage ? <ErrorText>{errorMessage }</ErrorText> : null}
+      {errorMessage ? <ErrorMessage>{errorMessage }</ErrorMessage> : null}
     </>    
   )
 }
 
 export { Input };
+
